@@ -1,0 +1,44 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: ARRAY EM ORDEM DECRESCENTE
+    Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
+    Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
+    */
+
+    //ENTRADA
+    const num1 = Number(prompt("Informe um número: "));
+    const num2 = Number(prompt("Informe outro número: "));
+    const num3 = Number(prompt("Informe outro número; "));
+
+    //PROCESSAMENTO
+    let numeros = [];
+
+    if ((num1 > num2) && (num1 > num3) && (num2 > num3)) {
+        numeros.push(num1, num2, num3)
+        alert(`Ordem decrescente: ${numeros.join(" - ")}`);
+
+    } else if ((num1 > num2) && (num1 > num3) && (num3 > num2)) {
+        numeros.push(num1, num3, num2)
+        alert(`Ordem decrescente: ${numeros.join(" - ")}`);
+
+    } else if ((num2 > num1) && (num2 > num3) && (num1 > num3)) {
+        numeros.push(num2, num1, num3)
+        alert(`Ordem decrescente: ${numeros.join(" - ")}`);
+
+    } else if ((num2 > num1) && (num2 > num3) && (num3 > num1)) {
+        numeros.push(num2, num3, num1)
+        alert(`Ordem decrescente: ${numeros.join(" - ")}`);
+
+    } else if ((num3 > num1) && (num3 > num2) && (num1 > num2)) {
+        numeros.push(num3, num1, num2)
+        alert(`Ordem decrescente: ${numeros.join(" - ")}`);
+
+    } else {
+        numeros.push(num3, num2, num1)
+        alert(`Ordem decrescente: ${numeros.join(" - ")}`);
+    }
+
+    //SAÍDA
+
+</script>
