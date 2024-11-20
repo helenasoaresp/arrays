@@ -13,11 +13,21 @@
     //PROCESSAMENTO
     let numero = [];
 
-    (num1 > num2) ? numero.push(num2) + numero.push(num1) :
-        numero.push(num1) + numero.push(num2);
+    if (num1 !== num2) {
+        if (num1 > num2) {
+            numero.push(num2);
+            numero.push(num1)
+            alert(`Ordem crescente: ${numero.join(" - ")}`);
+        } else {
+            numero.push(num1);
+            numero.push(num2)
+            alert(`Ordem crescente: ${numero.join(" - ")}`);
+        }
+    } else {
+        alert(`Os números são iguais!`)
+    }
 
 
     //SAÍDA 
-    alert(`O valor em ordem crescente é: ${numero.join(" - ")}`);
 
 </script>
