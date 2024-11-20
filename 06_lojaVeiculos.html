@@ -1,0 +1,86 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    <meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: LOJA DE VEÍCULOS
+    Crie os seguintes arrays:
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    
+    Peça para o usuário informar mais três veículos para serem inseridos na lista.
+    Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, 
+    Sedan ou Hatch.
+
+    Apresente a lista final de cada tipo de veículo.
+    */
+
+    //ENTRADA
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+
+    const lista = " SUV, Sedan e Hatch."
+
+    let veiculo1 = prompt("Informe o primeiro veículo:").toLowerCase();
+    let tipo1 = prompt("Informe o tipo do primeiro veículo:" + lista).toLowerCase();
+
+    let veiculo2 = prompt("Informe o segundo veículo:").toLowerCase();
+    let tipo2 = prompt("Informe o tipo do segundo veículo:" + lista).toLowerCase();
+
+    let veiculo3 = prompt("Informe o terceiro veículo:").toLowerCase();
+    let tipo3 = prompt("Informe o tipo do terceiro veículo:" + lista).toLowerCase();
+
+    //PROCESSAMENTO
+
+
+    if (tipo1 == "suv") {
+        carrosSUV.push(veiculo1);
+
+    } else if (tipo1 == "sedan") {
+        carrosSedan.push(veiculo1);
+
+    } else if (tipo1 == "hatch") {
+        carrosHatch.push(veiculo1);
+
+    } else {
+        document.write(`Informe um valor válido!!`)
+    }
+
+    if (tipo2 == "suv") {
+        carrosSUV.push(veiculo2);
+
+    } else if (tipo2 == "sedan") {
+        carrosSedan.push(veiculo2);
+
+    } else if (tipo2 == "hatch") {
+        carrosHatch.push(veiculo2);
+
+    } else {
+        document.write(`Informe um valor válido!!`)
+    }
+
+    if (tipo3 == "suv") {
+        carrosSUV.push(veiculo3);
+
+    } else if (tipo3 == "sedan") {
+        carrosSedan.push(veiculo3);
+
+    } else if (tipo3 == "hatch") {
+        carrosHatch.push(veiculo3);
+
+    } else {
+        document.write(`Informe um valor válido!!`)
+    };
+
+    //SAÍDA
+
+    document.write(`As novas lista são: <br> SUV: ${carrosSUV.join(", ")} <br> Sedan: ${carrosSedan.join(", ")} 
+    <br> Hatch: ${carrosHatch.join(", ")} `);
+
+
+    
+</script>

@@ -5,19 +5,31 @@
     Crie o seguinte array:
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     Pergunte ao usuário qual carro deseja REMOVER da lista.
-    Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
+    Apresente a lista antiga de SUVs e a C, após a remoção do veículo solicitado.
     */
 
     //ENTRADA
-    let carrosSuv = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    const carroRemovido = prompt("Informe qual carro você deseja remover da lista:" + " " + carrosSuv);
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+
+    let carroRemover = prompt("Qual carro você deseja remover da lista?\n" + carrosSUV.join(", ")); // /n pula linha.
 
     //PROCESSAMENTO
-    let remover = [];
-    const posicaoTexto = carrosSuv.indexOf(carroRemovido);
-    remover = carrosSuv.splice(posicaoTexto);
-    
-   
+
+    let listaAtualizada = [...carrosSUV]; // Usando os três pontos para fazer uma cópia do array. 
+
+    let carroRemovido = listaAtualizada.indexOf(carroRemover); 
+
+    if (carroRemovido >= 0) {
+        listaAtualizada.splice(carroRemovido, 1); 
+
+        document.write(` Lista antiga: ${carrosSUV.join(", ")} <br> 
+        Lista atualizada: ${listaAtualizada.join(", ")}`);
+
+    } else {
+        alert("Valor inválido!");
+    }
+
     //SAÍDA
 
 </script>

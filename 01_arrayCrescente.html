@@ -11,11 +11,13 @@
     const num2 = Number(prompt("Informe outro número: "));
 
     //PROCESSAMENTO
-    const numeros = [num1 , num2];
-    (num1 > num2) ? numeros.join(" - ") : numeros.reverse();
+    let numero = [];
+
+    (num1 > num2) ? numero.push(num2) + numero.push(num1) :
+        numero.push(num1) + numero.push(num2);
 
 
     //SAÍDA 
-    alert(`O valor em ordem crescente é: ${numeros.join(" - ")}`);
+    alert(`O valor em ordem crescente é: ${numero.join(" - ")}`);
 
 </script>
